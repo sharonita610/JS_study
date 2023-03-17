@@ -17,14 +17,15 @@ while (true) {
     var input = prompt(`숫자를 입력하세요. \n 그만두려면 '그만' 이라고 입력하세요!`);
 
     if (input === '그만') {
-        alert(`[${inputNums}]\n 입력한 숫자 총합 : ${total}`);
+        alert(`[${inputNums}]\n입력한 숫자 총합 : ${total}`);
 
         break;
     } else {
         inputNums.push(+input);
         // for (var i = 0; i < inputNums - 1; i++) {
-            total += +input;
+        //     total += +input;
         // }
+        total += +input;
 
     }
 
