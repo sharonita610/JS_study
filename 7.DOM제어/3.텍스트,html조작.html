@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #greet span {
+            color : red;
+        }
+        #greet::before {
+            /*content: 'what\'s up!';*/
+        }
+    </style>
+</head>
+<body>
+
+    <div id="greet">
+        Hello <span>World!</span>
+    </div>
+
+    <script>
+
+        const $greet = document.getElementById('greet');
+        console.log($greet.textContent);
+
+        // $greet.textContent = '안녕하세요~'; // 이건 글씨를 제어할때 사용한다
+        $greet.innerHTML = '<span>안녕</span>하세요~'; // 변경문 안에서 태그를 사용할거면 innerHTML 로 처리
+
+        // 모든 자식 태그를 삭제
+        // $greet.innerHTML = '';
+
+        $greet.innerHTML += '<span>메롱메롱</span>'; // 자식태그를 추가하는 기능
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+  <ul id="fruits">
+    <li>사과</li>
+    <li>바나나</li>
+    <li>포도</li>
+  </ul>
+
+  <script>
+
+      const $fruits = document.getElementById('fruits');
+
+      // 새로운 li생성
+      const $newLi = $fruits.firstElementChild.cloneNode();
+      $newLi.textContent = '복숭아';
+
+      console.log($newLi);
+
+      //노드 교체(new, old)
+      $fruits.replaceChild($newLi, $fruits.firstElementChild);
+
+      //자식노드 삭제
+      $fruits.removeChild($fruits.lastElementChild);
+
+      //
+      $fruits.innerHTML= '';
+  </script>
+
+</body>
+</html>
