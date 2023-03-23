@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+   <style>
+     .box{
+       width: 100px;
+       height: 100px;
+       background-color: red;
+
+     }
+   </style>
+</head>
+<body>
+
+  <div class="box" id="item" title="안녕하세요"></div>
+
+  <script>
+
+    const $box = document.querySelector('.box');
+
+    const hello = $box.getAttribute('title');
+    console.log(hello);
+
+    //속성 값 변경
+    $box.setAttribute('id','watermelon');
+
+    //속성 값추가
+    $box.setAttribute('style','border-radius:50%');
+
+    //속성 값제거
+    $box.removeAttribute('id');
+
+    //속성 유무확인
+    console.log($box.hasAttribute('style'));
+
+
+  </script>
+
+
+</body>
+</html>

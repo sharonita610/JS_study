@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+        .clickon {
+            display: none;
+
+        }
+
+    </style>
+</head>
+<body>
+<div id="lunches" class="menu">
+    <span class="title">추천메뉴(Click ME!!)</span>
+    <ul>
+        <li>돈까스</li>
+        <li>군만두</li>
+        <li>볶음밥</li>
+        <li>마파두부</li>
+    </ul>
+</div>
+
+<script>
+
+  const $clicker = document.querySelector('.title');
+  const [$list] = [...document.querySelectorAll('ul')];
+
+  console.log($list);
+  const CLASSNAME = 'clickon';
+  $clicker.onclick = function () {
+    $list.classList.toggle(CLASSNAME);
+  };
+
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    .dropdown {
+      font-size: 20px;
+      margin-left: 50px;
+    }
+
+    .btn {
+      width: 140px;
+      height: 50px;
+      color: lightgoldenrodyellow;
+      background: brown;
+      border: 2px solid black;
+      font-size: 20px;
+
+    }
+
+
+
+     #drop-content {
+      display: flex;
+      flex-direction: column;
+
+    }
+
+     .menuClick {
+       width: 150px;
+       height: 50px;
+       background: #bec0c2;
+       text-decoration: none;
+       color: black;
+       display: block !important;
+       align-items: center;
+       justify-content: center;
+       margin: 2px 0;
+    }
+     a{
+       width: 150px;
+       height: 50px;
+       background: #bec0c2;
+       text-decoration: none;
+       color: black;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       margin: 2px 0;
+     }
+
+
+
+  </style>
+
+</head>
+<body>
+<div class="dropdown">
+  <button class="btn">Drop</button>
+  <div style="display: none;" id="drop-content" class="menuClick">
+    <a href="#">Menu1</a>
+    <a href="#">Menu2</a>
+    <a href="#">Menu3</a>
+    <a href="#">Menu4</a>
+    <a href="#">Menu5</a>
+  </div>
+  <script>
+    const $button = document.querySelector('.btn');
+
+    const [$menu] = [...document.querySelectorAll('#drop-content')];
+
+    const MENU = 'menuClick';
+    $button.onclick = function () {
+      // $button.style.width = '130px';
+      // $menu.style.display = 'block';
+      $menu.classList.toggle(MENU);
+    };
+
+  </script>
+</div>
+</body>
+</html>
