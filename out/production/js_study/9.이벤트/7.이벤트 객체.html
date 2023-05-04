@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <p>아무곳이나 클릭하세요!</p>
+    <em class="msg"></em>
+
+    <hr><hr><hr>
+
+    <input type="text" id="text">
+    <p class="show"></p>
+
+    <script>
+
+        document.onclick = function ({x, y}){ // event 대신 보통 e라고 많이 쓴다
+          // console.log(`x:${e.x}, y:${e.y}`);
+
+          // const {x, y} = e;
+
+          const $em = document.querySelector('.msg');
+          $em.textContent = `x:${x}, y:${y}`;
+        };
+
+
+        const $textInput = document.getElementById(`text`);
+        console.log($textInput);
+
+        $textInput.addEventListener('keyup', e => {
+          // console.log(e);
+
+            const $show = document.querySelector('.show');
+
+            if(e.key === 'Enter'){
+                $show.textContent = $textInput.value; // 입력 한 값을 화면에 출력
+                $textInput.value = ''; // 엔터를 한 번 더 치면 지워지도록 한다.
+            }
+
+        });
+
+
+
+    </script>
+
+
+</body>
+</html>

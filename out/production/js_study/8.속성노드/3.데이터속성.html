@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+    <ul class="users">
+        <li data-user-number="4321" data-role="common">김철수</li>
+        <li data-user-number="9999" data-role="admin">박영희</li>
+    </ul>
+
+    <script>
+
+        const [$u1, $u2] = [...document.querySelector('.users').children];
+
+        const kimNumber = +$u1.dataset.userNumber; // 기본은 문자열임. +를 앞에 넣어줘야 숫자로 사용 가능
+        console.log(kimNumber + 1000);
+
+        const role = $u2.dataset.role;
+        console.log(role);
+
+        $u1.dataset.role = 'gold';
+
+        $u1.dataset.hahaHoho = '하하호호'; // data-haha-hoho="하하호호"이렇게 ㅂ임
+
+        delete $u1.dataset.role;
+
+    </script>
+
+
+</body>
+</html>

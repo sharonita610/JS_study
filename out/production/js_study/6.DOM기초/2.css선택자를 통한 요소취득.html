@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <ul id = "fruits">
+        <li class = "fr">사과</li>
+        <li class = "fr banana">바나나</li>
+        <li class = "fr grape">포도</li>
+        <li class = "fr">복숭아</li>
+    </ul>
+    <script>
+
+         const $grape = document.querySelector('.grape'); // css 선택자라 클래스니까 앞에 .을 필수로 붙여준다
+        // const $grape = document.querySelector('#fruits li:nth-child(3)'); // css 선택자라 클래스니까 앞에 .을 필수로 붙여준다
+        // const $grape = document.querySelector('.banana+li'); // css 선택자라 클래스니까 앞에 .을 필수로 붙여준다
+        // const $grape = document.querySelector('#fruits > li'); // css 선택자라 클래스니까 앞에 .을 필수로 붙여준다
+        // const $grape = document.querySelector('.fr'); // 중복되는 클래스 이름이 있으면 1번 만 바뀐다.
+
+        $grape.textContent = '맛있는포도';
+
+        // 선택자에 해당하는 모든 요소를 취득
+        //이런거는 유사배열이다. 출력해서 콘솔에 보여줄때만 [] <- 이게 들어간다.
+
+
+        // const elements = document.querySelectorAll('.fr');
+        const elements = [ ...document.querySelectorAll('.fr')]; // 이건 진짜 배열로 변경해준다
+         // 그래서 querySelectAll 사용할때는 배열에 복사해서 쓰는게 좋다
+
+        console.log(elements);
+
+        elements.push($grape);
+        // elements.pop();
+        console.log(elements);
+
+        // elements[0].style.background = 'red';
+
+        for(const $li of elements){
+          $li.style.border = '1px dashed skyblue';
+        }
+
+        // elements.age = 10;
+        // console.log(elements);
+
+         const [a,b,c,d] = [...document.querySelectorAll('li')];
+         d.textContent = '어피치';
+
+         elements.forEach($li => {
+           $li.style.color = 'blue';
+         });
+
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<style>
+        #fruits {
+            display: flex;
+            list-style: none;
+            padding: 20px;
+            border: 2px solid red;
+        }
+
+        #fruits li {
+            width: 100px;
+            cursor: pointer;
+            background: orange;
+            margin-right: 10px;
+        }
+
+        .active {
+            color: red;
+            text-decoration: underline;
+        }
+	</style>
+</head>
+<body>
+
+	<ul id="fruits">
+		<li id="apple" class="active">Apple</li>
+		<li id="banana">Banana</li>
+		<li id="grape">Grape</li>
+	</ul>
+
+	<div>선택된 과일: <em class="msg">Apple</em></div>
+
+	<label>
+		# 새로운 과일 추가하기:
+		<input type="text" class="text-box">
+		<button id="add">추가</button>
+	</label>
+
+
+	<script>
+
+	  /*
+		  li 태그들에게 일일히 이벤트를 부여하면
+		  새롭게 추가되는 li들도 또 이벤트를 부여해줘야 하는 번거로움이 생김
+
+		  부모내그인 ul에 범용성있는 이벤트를 부여해서 li들이 버블링을 통해 사용하도록 설정
+
+
+	  */
+
+      const $fruits = document.querySelector(`#fruits`);
+
+      //태그에서 클래스 active 를 제거하는 함수
+
+      const removeActive = () => {
+        [...$fruits.children].forEach($li => {
+          if ($li.classList.contains('active')) {
+            $li.classList.remove('active');
+            return;
+          }
+        });
+      };
+      $fruits.onclick = e => {
+        //이벤트 타겟 제한
+
+        console.log(e.target.matches('li'));
+        if (!e.target.matches('li')) {
+          return;
+        }
+        // console.log(`클릭이벤트 발생!`);
+        // console.log(e.target);
+
+        /*
+			1. 기존에 active 가 붙은 태그에서 active 제거
+			2. 클릭 대상에 클래스 active를 부여하고
+			3. 그 텍스트를 em.msg태그에 복사한다
+		*/
+
+        //1.
+        removeActive();
+
+        //2.
+        e.target.classList.add('active');
+
+        //3.
+        const $msg = document.querySelector('.msg');
+        $msg.textContent = e.target.textContent;
+
+      }
+
+      const makeNewFruit = () => {
+
+      };
+      /*
+		  1. 입력창에 과일 이름을 쓰고 '추가' 버튼을 누르면 입력창에 있는 텍스트가
+		  <li id='텍스트'>텍스트</li> 이런 형태로 생성되어 ul의 끝자식으로 추가 되어야한다.
+
+	  */
+      // 1. 버튼 이벤트 말들기
+      const $addBtn = document.getElementById('add');
+
+      //4.
+      const $textInput = document.querySelector('.text-box');
+      // console.log($textInput);
+
+      // 2. 버튼 온클릭
+      $addBtn.onclick = e => {
+        // 3. console.log('추가버튼 클릭합!'); 이런 식으로 꼭 확인하기
+
+        // 5. console.log($textInput.value); 입련한 내용이 확인 되는지 보기
+        // 6.
+        const text = $textInput.value;
+
+
+        // 7.
+        const $newLi = document.createElement('li');
+
+        //8
+        $newLi.setAttribute('id', text.toLowerCase());
+
+        //9
+        $newLi.textContent = text;
+
+        //10
+        console.log($newLi);
+
+        //11
+        $newLi.appendChild($newLi);
+
+        // 12
+        $textInput.value = '';
+
+
+      };
+
+      $addBtn.onclick = e => makeNewFruit();
+
+      $textInput.onkeyup = e => {
+        if(e.key === 'Enter') makeNewFruit();
+      };
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

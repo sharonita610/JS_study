@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .dropdown {
+            font-size: 20px;
+            margin-left: 50px;
+        }
+
+        .btn {
+            width: 140px;
+            height: 50px;
+            color: lightgoldenrodyellow;
+            background: brown;
+            border: 2px solid black;
+            font-size: 20px;
+
+        }
+
+
+        #drop-content {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        #drop-content a {
+            width: 150px;
+            height: 50px;
+            background: #bec0c2;
+            text-decoration: none;
+            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 2px 0;
+        }
+
+
+    </style>
+
+</head>
+<body>
+<div class="dropdown">
+    <button class="btn">Drop</button>
+    <div style="display: none;" id="drop-content">
+        <a href="#">Menu1</a>
+        <a href="#">Menu2</a>
+        <a href="#">Menu3</a>
+        <a href="#">Menu4</a>
+        <a href="#">Menu5</a>
+        <!--        style="display: none;"-->
+    </div>
+    <script>
+      const $button = document.querySelector('.btn');
+
+      const [$menu] = [...document.querySelectorAll('#drop-content')];
+
+      $button.onmouseover = function () {
+        $button.style.width = '140px';
+        $menu.style.display = 'block';
+      };
+      $button.onmouseout = function () {
+        $button.style.width = '150px';
+        $menu.style.display = 'none';
+
+      };
+
+    </script>
+</div>
+</body>
+</html>

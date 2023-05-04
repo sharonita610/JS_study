@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<ul id="fruits">
+    <li>사과</li>
+    <li>바나나</li>
+    <li>포도</li>
+</ul>
+<script>
+
+    const $fruits = document.getElementById('fruits');
+
+    const $newLi = document.createElement('li');
+    $newLi.textContent = '망고';
+
+    // $fruits.insertBefore($newLi, $fruits.lastElementChild);
+    // $fruits.insertBefore($newLi, $fruits.children[1]);
+    // $fruits.insertBefore($newLi, document.querySelector('#fruits li:first-child'));
+    $fruits.insertBefore($newLi, $fruits.firstElementChild.nextElementSibling);
+
+    // 노드이동
+    const [$apple, $mango , $banana, $grape] = [...$fruits.children];
+    $fruits.appendChild($apple); // 바로 뒤로 가버린다
+    $fruits.insertBefore($banana, $apple); // 아예 없을때는 생성, 기존 태그는 이동을 하게 된다.
+
+
+</script>
+
+</body>
+</html>

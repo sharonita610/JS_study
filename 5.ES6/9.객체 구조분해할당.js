@@ -22,7 +22,7 @@ const{birthDay, age, ...rest} = emp;
 
 console.log(birthDay);
 console.log(age);
-console.log(rest);
+console.log(rest)
 
 // 객체 안전 복사 : 스프레드
 // const copyEmp = {...emp};// 원본을 복사한다

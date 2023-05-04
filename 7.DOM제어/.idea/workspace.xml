@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e0fe13f4-379c-4b37-80c5-5c3bfeeec770" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/../10.모듈/bar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../10.모듈/foo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../10.모듈/module_test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../9.이벤트/10.이벤트위임.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../9.이벤트/6.핸들러콜백방식.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../9.이벤트/7.이벤트 객체.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../9.이벤트/8.이벤트전파1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../9.이벤트/9.이벤트전파2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../9.이벤트/ds.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UPDOWN/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UPDOWN/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UPDOWN/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UPDOWN/js/checkAnswer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UPDOWN/js/gameData.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UPDOWN/js/start.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../6.DOM기초/1.아이디를통한 요소취득.html" beforeDir="false" afterPath="$PROJECT_DIR$/../6.DOM기초/1.아이디를통한 요소취득.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../9.이벤트/3.quiz1.html" beforeDir="false" afterPath="$PROJECT_DIR$/../9.이벤트/3.quiz1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../9.이벤트/quiz.html" beforeDir="false" afterPath="$PROJECT_DIR$/../9.이벤트/quiz.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REPASO/6.DOM기초/1.함수표현식.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REPASO/6.DOM기초/2.화살표함수.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REPASO/6.DOM기초/3.UpDown개선.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REPASO/6.DOM기초/4.콜백함수.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REPASO/6.DOM기초/5.콜백 활용.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REPASO/6.DOM기초/6.클로저함수.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REPASO/6.DOM기초/7.클로저활용.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REPASO/6.DOM기초/8.배열 구조분해할당.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REPASO/6.DOM기초/9.객체 구조분해할당.js" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="2NsFHCUYdxBdOGMxLuAYeu3Nqlc" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Programming_academy/js_study",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="디폴트 작업">
+      <changelist id="e0fe13f4-379c-4b37-80c5-5c3bfeeec770" name="변경" comment="" />
+      <created>1680444792940</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1680444792940</updated>
+      <workItem from="1680444794165" duration="50000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
